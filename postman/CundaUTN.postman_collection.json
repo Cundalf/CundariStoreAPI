@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "ea279274-9fe0-4562-ab8e-02df9cff07c3",
+		"name": "CundaUTN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Products Examples",
+					"item": [
+						{
+							"name": "Add Product WD",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "WD 2TB Elements Portable External Hard Drive",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "WD-2TB-PORT",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "59.99",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product Sandisk",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "SanDisk SSD PLUS 1TB Internal SSD",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "SD-SSD-1TB",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "99.99",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product Acer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "NB-ACR-FHD",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "550",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/6148a0b17961f264c5e74510",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6148a0b17961f264c5e74510"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/6148a1e67961f264c5e7451b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6148a1e67961f264c5e7451b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "WD 2TB Elements Portable External Hard Drive",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sku",
+									"value": "WD-2TB-PORT",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "59.99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "WD 2TB Elements Portable External Hard Drive",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sku",
+									"value": "WD-2TB-PORT",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "85",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "59.99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/6148a0b17961f264c5e74510",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6148a0b17961f264c5e74510"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/6148a62f15f493f59682350b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"6148a62f15f493f59682350b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/6148a61815f493f596823505",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"6148a61815f493f596823505"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Scorpio, Hank",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "hscorpio@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Scorpio, Hank",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "hscorpio@globex.com",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/6148a62f15f493f59682350b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"6148a62f15f493f59682350b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
