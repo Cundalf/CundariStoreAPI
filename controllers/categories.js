@@ -1,9 +1,10 @@
 const categoryModel = require("../models/category");
 
 module.exports = {
-    getAll: async function (req, res, next) {
+    getAll: async function (req, res) {
         try {
-            const categories = await categoryModel.find();
+
+            const categories = await categoryModel.find({ state: true });
 
             res.json({
                 ok: true,
@@ -16,34 +17,7 @@ module.exports = {
             });
         }
     },
-    getAllPaginate: async function (req, res, next) {
-        try {
-            let queryFind = {};
-            if (req.query.find) {
-                queryFind = {
-                    description: { $regex: ".*" + req.query.find + ".*", $options: "i" }
-                };
-            }
-
-            const categories = await categoryModel.paginate(queryFind, {
-                sort: { description: 1, sku: -1 },
-                limit: req.query.limit || 2,
-                page: req.query.page || 1
-            });
-
-            res.json({
-                ok: true,
-                data: categories
-            });
-        } catch (e) {
-            res.status(500).json({
-                ok: false,
-                error: e.message
-            });
-        }
-
-    },
-    getById: async function (req, res, next) {
+    getById: async function (req, res) {
         try {
             const id = req.params.id;
 
@@ -66,21 +40,9 @@ module.exports = {
             });
         }
     },
-    create: async function (req, res, next) {
+    create: async function (req, res) {
         try {
-            let { description, state } = req.body;
-
-            if (!description || !state) {
-                res.status(400).json({
-                    ok: false,
-                    error: "No se recibio la informacion necesaria"
-                });
-            }
-
-            const category = new categoryModel({
-                description,
-                state
-            });
+            const category = new categoryModel(req.body);
 
             const document = await category.save();
             res.json({
@@ -94,7 +56,7 @@ module.exports = {
             });
         }
     },
-    update: async function (req, res, next) {
+    update: async function (req, res) {
 
         const id = req.params.id;
 
@@ -118,8 +80,7 @@ module.exports = {
             });
         }
     },
-    delete: async function (req, res, next) {
-        //Insertar en base
+    delete: async function (req, res) {
         try {
 
             const id = req.params.id;

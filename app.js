@@ -4,7 +4,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var jwt = require("jsonwebtoken");
 
 // Rutas
 var indexRouter = require('./routes/index');
@@ -15,7 +14,7 @@ var categoriesRouter = require('./routes/categories');
 var app = express();
 
 // Config
-app.set("secretKey", "CundaSuperMegaHiperSecretKey");
+app.set('secretKey', 'CundaSuperMegaHiperSecretKey');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,22 +36,6 @@ app.use('/category', categoriesRouter);
 app.use(function (req, res, next) {
 	next(createError(404));
 });
-
-// Middleware
-app.validateUser = (req, res, next) => {
-	jwt.verify(req.headers['x-access-token'], req.app.get("secretKey"), function (err, decoded) {
-		if (err) {
-			return res.status(403).json({
-				ok: false,
-				message: err.message 
-			});
-		} else {
-			console.log(decoded);
-			req.body._userId = decoded.userId;
-			next();
-		}
-	});
-};
 
 // error handler
 app.use(function (err, req, res, next) {

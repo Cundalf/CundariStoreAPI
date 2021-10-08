@@ -6,24 +6,36 @@ const bcrypt = require("bcrypt");
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, errorMessage.GENERAL.campo_obligatorio],
+        required: [true, errorMessage.GENERAL.obligatoryField],
     },
     email: {
         type: String,
-        required: [true, errorMessage.GENERAL.campo_obligatorio],
+        required: [true, errorMessage.GENERAL.obligatoryField],
         unique: true
 
     },
     password: {
         type: String,
-        required: [true, errorMessage.GENERAL.campo_obligatorio],
+        required: [true, errorMessage.GENERAL.obligatoryField],
         validate: {
             validator: function (value) {
                 return validators.isGoodPassword(value);
             },
             message: errorMessage.USERS.passwordIncorrect
         }
-    }
+    },
+    role: {
+        type: String,
+        default: 'user',
+        enum: {
+            values: ['user', 'admin', 'employee'],
+            message: 'El rol {VALUE} no es soportado'
+        }
+    },
+    state: {
+        type: Boolean,
+        default: true
+    },
 });
 
 userSchema.pre("save", function (next) {

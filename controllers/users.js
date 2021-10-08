@@ -1,26 +1,36 @@
 const userModel = require("../models/user");
+const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken');
 
 module.exports = {
     login: async function (req, res, next) {
         try {
+
+            if (!req.body.email || !req.body.password) {
+                return res.status(400).json({
+                    ok: false,
+                    error: "No se recibio la informacion necesaria"
+                });
+            }
+
             const user = await userModel.findOne({ email: req.body.email });
             if (!user) {
-                return res.status(500).json({
+                return res.status(403).json({
                     ok: false,
                     error: "Datos incorrectos"
                 });
             }
 
             if (bcrypt.compareSync(req.body.password, user.password)) {
-                
-                const token = jwt.sign({ userId: user._id }, req.app.get("secretKey"), { expiresIn: "1h" });
+
+                const token = jwt.sign({ userId: user._id, role: user.role }, req.app.get("secretKey"), { expiresIn: "1h" });
                 return res.json({
                     ok: true,
-                    token: token 
+                    token: token
                 });
-                
+
             } else {
-                return res.status(500).json({
+                return res.status(403).json({
                     ok: false,
                     error: "Datos incorrectos"
                 });
@@ -36,7 +46,8 @@ module.exports = {
     },
     getAll: async function (req, res, next) {
         try {
-            const users = await userModel.find();
+
+            const users = await userModel.find({ state: true });
             res.json({
                 ok: true,
                 data: users
@@ -73,20 +84,7 @@ module.exports = {
     },
     create: async function (req, res, next) {
         try {
-            let { name, email, state } = req.body;
-
-            if (!name || !email || !state) {
-                res.status(400).json({
-                    ok: false,
-                    error: "No se recibio la informacion necesaria"
-                });
-            }
-
-            const user = new userModel({
-                name,
-                email,
-                state
-            });
+            const user = new userModel(req.body);
 
             const document = await user.save();
             res.json({

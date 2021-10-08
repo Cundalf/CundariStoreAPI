@@ -9,5 +9,8 @@ module.exports = {
     },
     emailValidate: (input) => {
         return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(input);
+    },
+    urlValidate: (input) => {
+        return /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(input);
     }
-}
+};
