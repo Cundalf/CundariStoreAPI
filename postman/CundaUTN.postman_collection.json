@@ -15,7 +15,13 @@
 							"name": "Add Product WD",
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "urlencoded",
 									"urlencoded": [
@@ -53,6 +59,16 @@
 											"key": "price",
 											"value": "59.99",
 											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "6160b702150e7181739d05de",
+											"type": "text"
+										},
+										{
+											"key": "popular",
+											"value": "0",
+											"type": "text"
 										}
 									]
 								},
@@ -74,7 +90,13 @@
 							"name": "Add Product Sandisk",
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "urlencoded",
 									"urlencoded": [
@@ -112,6 +134,16 @@
 											"key": "price",
 											"value": "99.99",
 											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "6160b702150e7181739d05de",
+											"type": "text"
+										},
+										{
+											"key": "popular",
+											"value": "0",
+											"type": "text"
 										}
 									]
 								},
@@ -133,7 +165,13 @@
 							"name": "Add Product Acer",
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MzI3MjAsImV4cCI6MTYzMzczNjMyMH0.UhYH1cKRRxBYz9ifWxjdQyA5FopG0Cmor1PDaGHPxEE",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "urlencoded",
 									"urlencoded": [
@@ -144,7 +182,7 @@
 										},
 										{
 											"key": "description",
-											"value": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology.",
+											"value": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. Home Office Ideal.",
 											"type": "text"
 										},
 										{
@@ -170,6 +208,91 @@
 										{
 											"key": "price",
 											"value": "550",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "6160b702150e7181739d05de",
+											"type": "text"
+										},
+										{
+											"key": "popular",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product Anillo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "WD 2TB Elements Portable External Hard Drive",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "WD-2TB-PORT",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "59.99",
+											"type": "text"
+										},
+										{
+											"key": "popular",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "6160b702150e7181739d05de",
 											"type": "text"
 										}
 									]
@@ -210,12 +333,32 @@
 					"response": []
 				},
 				{
-					"name": "Get Product",
+					"name": "Get Popular Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "8",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
 						"url": {
-							"raw": "http://localhost:3000/product/6148a0b17961f264c5e74510",
+							"raw": "http://localhost:3000/product/popular",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -223,7 +366,72 @@
 							"port": "3000",
 							"path": [
 								"product",
-								"6148a0b17961f264c5e74510"
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products Paginate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "find",
+									"value": "Sand",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/paginate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"paginate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/6160c3bb5f06fac239aede75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6160c3bb5f06fac239aede75"
 							]
 						}
 					},
@@ -233,9 +441,15 @@
 					"name": "Delete Product",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:3000/product/6148a1e67961f264c5e7451b",
+							"raw": "http://localhost:3000/product/6160c14a5f06fac239aede6c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -243,7 +457,7 @@
 							"port": "3000",
 							"path": [
 								"product",
-								"6148a1e67961f264c5e7451b"
+								"6160c14a5f06fac239aede6c"
 							]
 						}
 					},
@@ -253,23 +467,29 @@
 					"name": "Add Product",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYzYzNmEwN2E1YmZmYjllNjQ4YWYiLCJyb2xlIjoidXNlciIsImlhdCI6MTYzMzczMzQzMywiZXhwIjoxNjMzNzM3MDMzfQ.IF8N0v7HOmi7_kmr87M5tiKInFskgl48jA40tu_7d84",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "WD 2TB Elements Portable External Hard Drive",
+									"value": "Anillo de plata y amatista PRUEBA6",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity",
+									"value": "Anillo de plata con detalles de cristal con joya Amatista PRUEBA6",
 									"type": "text"
 								},
 								{
 									"key": "image",
-									"value": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+									"value": "https://www.consumer.es/wp-content/uploads/2020/01/anillo-amatista-brillantes.jpg",
 									"type": "text"
 								},
 								{
@@ -279,17 +499,27 @@
 								},
 								{
 									"key": "sku",
-									"value": "WD-2TB-PORT",
+									"value": "AN-PLA-AMA-PRU6",
 									"type": "text"
 								},
 								{
 									"key": "quantity",
-									"value": "100",
+									"value": "50",
 									"type": "text"
 								},
 								{
 									"key": "price",
-									"value": "59.99",
+									"value": "160",
+									"type": "text"
+								},
+								{
+									"key": "popular",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6160b7b395b845a8ba646bec",
 									"type": "text"
 								}
 							]
@@ -312,49 +542,72 @@
 					"name": "Update Product",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
 									"key": "name",
 									"value": "WD 2TB Elements Portable External Hard Drive",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "description",
-									"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity",
+									"value": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity.",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"value": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "state",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "sku",
 									"value": "WD-2TB-PORT",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "quantity",
 									"value": "85",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "price",
 									"value": "59.99",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "popular",
+									"value": "1",
 									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6160b702150e7181739d05de",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/product/6148a0b17961f264c5e74510",
+							"raw": "http://localhost:3000/product/6160c14a5f06fac239aede6c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -362,7 +615,7 @@
 							"port": "3000",
 							"path": [
 								"product",
-								"6148a0b17961f264c5e74510"
+								"6160c14a5f06fac239aede6c"
 							]
 						}
 					},
@@ -394,11 +647,18 @@
 				},
 				{
 					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/user/6148a62f15f493f59682350b",
+							"raw": "http://localhost:3000/user/6160b057596f8638f2da114d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -406,7 +666,7 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"6148a62f15f493f59682350b"
+								"6160b057596f8638f2da114d"
 							]
 						}
 					},
@@ -416,9 +676,15 @@
 					"name": "Delete User",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjA1NzU5NmY4NjM4ZjJkYTExNGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3Mjc1MDksImV4cCI6MTYzMzczMTEwOX0.3iudtCTsDeG9Accn7ABlkkd-iCMDIwHKpA7szvDEgSU",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:3000/user/6148a61815f493f596823505",
+							"raw": "http://localhost:3000/user/6160b057596f8638f2da114d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -426,7 +692,7 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"6148a61815f493f596823505"
+								"6160b057596f8638f2da114d"
 							]
 						}
 					},
@@ -454,6 +720,16 @@
 									"key": "state",
 									"value": "1",
 									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "A1b2c3d4",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
 								}
 							]
 						},
@@ -476,13 +752,19 @@
 					"name": "Update User",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjA1NzU5NmY4NjM4ZjJkYTExNGQiLCJpYXQiOjE2MzM3MjcxNjQsImV4cCI6MTYzMzczMDc2NH0.7FcSblF5Stug8U2cjQw2ROzB8gY-FfZUSGnOcJ5VZ78",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "Scorpio, Hank",
+									"value": "Scorpio,Hank",
 									"type": "text"
 								},
 								{
@@ -494,11 +776,22 @@
 									"key": "state",
 									"value": "1",
 									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "a1b2c3d4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/user/6148a62f15f493f59682350b",
+							"raw": "http://localhost:3000/user/6160b660e3e2a5bb72669192",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -506,13 +799,339 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"6148a62f15f493f59682350b"
+								"6160b660e3e2a5bb72669192"
 							]
 						}
 					},
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category Examples",
+					"item": [
+						{
+							"name": "Add Category Electronics",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "description",
+											"value": "Electronics",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Category Jewelery",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "description",
+											"value": "Electronics",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Category Men's clothing",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "description",
+											"value": "Men's clothing",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Category Women's clothing",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "description",
+											"value": "Women's clothing",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "TestCategory",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/6160b702150e7181739d05de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"6160b702150e7181739d05de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "Women's Clothing",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/6160b7f595b845a8ba646bf0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"6160b7f595b845a8ba646bf0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYwYjY2MGUzZTJhNWJiNzI2NjkxOTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzM3MjgxMTEsImV4cCI6MTYzMzczMTcxMX0.gyCzFxYuZDY6nI1fypypmoBaOWrFEr5nwR6J-uKrIXE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/category/6160b7f595b845a8ba646bf0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"6160b7f595b845a8ba646bf0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "hscorpio@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A1b2c3d4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
